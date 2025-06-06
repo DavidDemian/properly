@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import properlyLogo from '../assets/images/properlyFT.png';
+import properlyLogo from '../assets/images/logoproperly.png';
 
 const Footer = () => {
   return (
