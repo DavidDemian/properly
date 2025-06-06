@@ -27,6 +27,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        mixed: ['"Crimson Pro"', 'Righteous', 'sans-serif'],
       },
     },
   },
