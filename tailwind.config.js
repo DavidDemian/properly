@@ -22,12 +22,13 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#3B82F6", // Blue color from the Properly logo
+        primary: "#3496ff", // Updated to match the blue in the Properly logo
         secondary: "#FFD700", // Gold accent
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         mixed: ['"Crimson Pro"', 'Righteous', 'sans-serif'],
+        abril: ['"Abril Fatface"', 'cursive'],
       },
     },
   },

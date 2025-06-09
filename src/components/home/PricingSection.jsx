@@ -37,11 +37,11 @@ const PricingSection = () => {
       features: [
         { name: 'IDX website', included: true },
         { name: 'Smart business card', included: true },
-        { name: 'Virtual tour', included: true },
-        { name: 'Virtual staging', included: false },
+        { name: 'Virtual staging', included: true },
+        { name: 'Virtual tour', included: false },
       ],
       turnaround: '5 business days',
-      deliverables: 'Website link, 10 NFC cards, 1 virtual tour per month',
+      deliverables: 'Website link, 10 NFC cards, 1 virtual staging per month',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />

@@ -2,8 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
+import ComingSoon from './pages/ComingSoon';
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 function App() {
+  if (isProduction) {
+    return <ComingSoon />;
+  }
   return (
     <Router>
       <Routes>

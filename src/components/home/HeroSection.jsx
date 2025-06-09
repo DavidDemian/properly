@@ -3,6 +3,13 @@ import { motion } from 'framer-motion';
 import Button from '../Button';
 
 const HeroSection = () => {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center bg-gray-50 overflow-hidden">
       {/* Background Elements */}
@@ -33,7 +40,7 @@ const HeroSection = () => {
               <Button to="/pricing" size="lg">
                 Pick Your Plan
               </Button>
-              <Button to="/services" variant="outline" size="lg">
+              <Button onClick={scrollToServices} variant="outline" size="lg">
                 Explore Services
               </Button>
             </div>
@@ -138,18 +145,18 @@ const HeroSection = () => {
             <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-8 border-dashed border-gray-200"></div>
           </motion.div>
         </div>
-        
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-          <p className="text-sm text-gray-500 mb-2">Scroll to explore</p>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5 }}
-            className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center pt-2"
-          >
-            <motion.div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></motion.div>
-          </motion.div>
-        </div>
+      </div>
+
+      {/* Scroll indicator - moved outside container */}
+      <div className="absolute bottom-2 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-30 w-full pointer-events-none">
+        <p className="text-sm text-gray-500 mb-2">Scroll to explore</p>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center pt-2"
+        >
+          <motion.div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></motion.div>
+        </motion.div>
       </div>
     </section>
   );
