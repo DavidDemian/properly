@@ -1,14 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import properlyLogo from '../assets/images/Body 3.png';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import ProperlyLogo from '../assets/images/ProperlyLogo.jsx';
+
+const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 120) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -19,6 +28,23 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Helper to route and scroll to section
+  const goToSection = (section) => {
+    if (location.pathname === '/') {
+      setTimeout(() => {
+        const el = document.getElementById(section);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          el.classList.add('ring-4', 'ring-primary', 'ring-offset-2');
+          setTimeout(() => el.classList.remove('ring-4', 'ring-primary', 'ring-offset-2'), 1200);
+        }
+      }, 100);
+    } else {
+      navigate('/', { state: { scrollTo: section } });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav 
       className={`fixed left-0 right-0 z-50 transition-all duration-300 font-mixed ${
@@ -26,24 +52,23 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between px-4 sm:px-6">
-        <Link to="/" className="flex items-center">
-          <img src={properlyLogo} alt="Properly Logo" className="h-20 md:h-36 transition-all duration-300" />
-        </Link>
+        <button
+          onClick={() => {
+            navigate('/');
+            setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
+          }}
+          className="flex items-center bg-transparent border-none outline-none cursor-pointer"
+          aria-label="Scroll to top"
+        >
+          <ProperlyLogo className="h-20 md:h-36 transition-all duration-300" />
+        </button>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/services" className="text-gray-800 hover:text-primary font-medium transition-colors duration-300">
-            Services
-          </Link>
-          <Link to="/pricing" className="text-gray-800 hover:text-primary font-medium transition-colors duration-300">
-            Pricing
-          </Link>
-          <Link to="/about" className="text-gray-800 hover:text-primary font-medium transition-colors duration-300">
-            About
-          </Link>
-          <Link to="/contact" className="btn btn-primary transition-all duration-300">
-            Get Started
-          </Link>
+          <button onClick={() => goToSection('what-we-do')} className="text-gray-800 hover:text-primary font-medium transition-colors duration-300 bg-transparent border-none outline-none cursor-pointer">About</button>
+          <button onClick={() => goToSection('services')} className="text-gray-800 hover:text-primary font-medium transition-colors duration-300 bg-transparent border-none outline-none cursor-pointer">Services</button>
+          <button onClick={() => goToSection('pricing')} className="text-gray-800 hover:text-primary font-medium transition-colors duration-300 bg-transparent border-none outline-none cursor-pointer">Pricing</button>
+          <Link to="/get-started" className="px-8 py-3 rounded-xl bg-primary text-white font-bold text-lg shadow-lg hover:bg-primary/90 transition-all duration-200 border-2 border-primary focus:ring-4 focus:ring-primary/30 focus:outline-none ml-2">Get Started</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -68,29 +93,26 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white bg-opacity-40 backdrop-blur-sm shadow-lg transition-all duration-300 rounded-b-lg">
           <div className="container py-4 px-4 flex flex-col space-y-2">
-            <Link 
-              to="/services" 
-              className="text-gray-800 hover:text-primary font-medium py-3 px-4 rounded-md hover:bg-gray-100 transition-all duration-300 text-center sm:text-left"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link 
-              to="/pricing" 
-              className="text-gray-800 hover:text-primary font-medium py-3 px-4 rounded-md hover:bg-gray-100 transition-all duration-300 text-center sm:text-left"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Pricing
-            </Link>
-            <Link 
-              to="/about" 
-              className="text-gray-800 hover:text-primary font-medium py-3 px-4 rounded-md hover:bg-gray-100 transition-all duration-300 text-center sm:text-left"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <button
+              onClick={() => { goToSection('what-we-do'); setIsMobileMenuOpen(false); }}
+              className="text-gray-800 hover:text-primary font-medium py-3 px-4 rounded-md hover:bg-gray-100 transition-all duration-300 text-center sm:text-left bg-transparent border-none outline-none cursor-pointer"
             >
               About
-            </Link>
+            </button>
+            <button
+              onClick={() => { goToSection('services'); setIsMobileMenuOpen(false); }}
+              className="text-gray-800 hover:text-primary font-medium py-3 px-4 rounded-md hover:bg-gray-100 transition-all duration-300 text-center sm:text-left bg-transparent border-none outline-none cursor-pointer"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => { goToSection('pricing'); setIsMobileMenuOpen(false); }}
+              className="text-gray-800 hover:text-primary font-medium py-3 px-4 rounded-md hover:bg-gray-100 transition-all duration-300 text-center sm:text-left bg-transparent border-none outline-none cursor-pointer"
+            >
+              Pricing
+            </button>
             <Link 
-              to="/contact" 
+              to="/get-started" 
               className="btn btn-primary w-full text-center mt-6 py-3"
               onClick={() => setIsMobileMenuOpen(false)}
             >

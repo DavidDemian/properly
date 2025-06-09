@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Button = ({ 
   children, 
@@ -46,9 +47,16 @@ const Button = ({
   }
   
   return (
-    <button className={allClasses} onClick={onClick} {...props}>
+    <motion.button
+      whileHover={{ scale: 1.04, opacity: 0.95 }}
+      whileTap={{ scale: 0.96, opacity: 0.85 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      className={allClasses}
+      onClick={onClick}
+      {...props}
+    >
       {children}
-    </button>
+    </motion.button>
   );
 };
 

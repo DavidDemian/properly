@@ -4,7 +4,7 @@ const Section = ({
   children, 
   id, 
   className = '', 
-  bgColor = 'bg-white',
+  bgColor = 'bg-transparent',
   paddingY = 'py-16 md:py-24',
 }) => {
   return (

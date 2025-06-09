@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import properlyLogo from '../assets/images/Body 3.png';
+import ProperlyLogo from '../assets/images/ProperlyLogo.jsx';
 
 const FloatingLogo = () => {
   const [show, setShow] = useState(true);
@@ -25,9 +25,9 @@ const FloatingLogo = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
-          className="fixed top-8 left-1/2 -translate-x-1/3 z-[100] sm:left-1/4 sm:-translate-x-0"
+          className="absolute left-1/2 top-0 -translate-x-1/2 z-30 mt-8 mb-8 flex justify-center w-full pointer-events-none"
         >
-          <img src={properlyLogo} alt="Properly Logo" className="h-40 md:h-56 w-auto drop-shadow-lg" />
+          <ProperlyLogo className="h-28 md:h-40 w-auto drop-shadow-lg mx-auto" />
         </motion.div>
       )}
     </AnimatePresence>

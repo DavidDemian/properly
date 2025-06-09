@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import properlyLogo from '../assets/images/Body 3.png';
+import ProperlyLogo from '../assets/images/ProperlyLogo.jsx';
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-1">
-            <img src={properlyLogo} alt="Properly Logo" className="h-20 mb-4 invert" />
+            <ProperlyLogo className="h-20 mb-4 invert" />
             <p className="text-gray-400 mt-4">
               Elevating real estate marketing with cutting-edge digital solutions for modern realtors.
             </p>

@@ -61,6 +61,120 @@ const styles = `
   }
 `;
 
+// Service-specific animation components
+const ServiceDemo = ({ service }) => {
+  if (service.title === 'Virtual Staging') {
+    // Before/After crossfade animation
+    return (
+      <div className="relative w-full h-32 mb-4 rounded-lg overflow-hidden">
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: [1, 0.1, 1] }}
+          transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
+          className="absolute inset-0 bg-gray-200 flex items-center justify-center z-10"
+        >
+          <span className="text-xs bg-black/60 text-white px-2 py-1 rounded absolute top-2 left-2">Before</span>
+          <svg width="60" height="60" viewBox="0 0 60 60"><rect x="10" y="30" width="40" height="20" rx="4" fill="#bbb" /><rect x="20" y="40" width="20" height="6" rx="2" fill="#999" /></svg>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0, 1, 0] }}
+          transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
+          className="absolute inset-0 bg-blue-100 flex items-center justify-center z-20"
+        >
+          <span className="text-xs bg-primary text-white px-2 py-1 rounded absolute top-2 left-2">After</span>
+          <svg width="60" height="60" viewBox="0 0 60 60"><rect x="10" y="30" width="40" height="20" rx="4" fill="#e0c9a6" /><rect x="20" y="40" width="20" height="6" rx="2" fill="#bfa76f" /><rect x="15" y="35" width="10" height="8" rx="2" fill="#8ecae6" /><rect x="35" y="35" width="10" height="8" rx="2" fill="#219ebc" /></svg>
+        </motion.div>
+      </div>
+    );
+  }
+  if (service.title === 'Virtual Tours') {
+    // Animated house with camera orbit
+    return (
+      <div className="flex flex-col items-center mb-4 relative h-24">
+        <div className="relative w-20 h-20 flex items-center justify-center">
+          {/* House Icon */}
+          <svg width="48" height="48" viewBox="0 0 48 48" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+            <rect x="12" y="24" width="24" height="16" rx="3" fill="#e0e7ef" />
+            <polygon points="24,10 10,24 38,24" fill="#3496ff" />
+            <rect x="20" y="32" width="8" height="8" rx="2" fill="#fff" />
+          </svg>
+          {/* Camera Orbit Animation */}
+          <motion.div
+            style={{ position: 'absolute', left: '50%', top: '50%', originX: '0%', originY: '0%' }}
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
+          >
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <circle cx="10" cy="10" r="8" fill="none" stroke="#bbb" strokeWidth="2" />
+              <rect x="14" y="2" width="6" height="4" rx="1" fill="#222" stroke="#fff" strokeWidth="1" transform="rotate(20 10 10)" />
+              <circle cx="17" cy="4" r="1" fill="#fff" />
+            </svg>
+          </motion.div>
+        </div>
+        <span className="text-xs text-gray-500 mt-2">360° Walkthrough</span>
+      </div>
+    );
+  }
+  if (service.title === 'IDX Website (React)') {
+    // Animated browser window
+    return (
+      <div className="relative w-full h-32 mb-4 rounded-lg overflow-hidden bg-blue-50 flex items-center justify-center">
+        <motion.div
+          initial={{ x: -40 }}
+          animate={{ x: [0, 20, 0] }}
+          transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
+          className="w-32 h-20 bg-white rounded shadow flex flex-col justify-between"
+        >
+          <div className="h-4 bg-blue-200 rounded-t"></div>
+          <div className="flex-1 flex flex-col justify-center items-center">
+            <div className="w-16 h-2 bg-blue-100 rounded mb-2"></div>
+            <div className="w-10 h-2 bg-blue-100 rounded"></div>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
+  if (service.title === 'NFC Business Card') {
+    // Card tap animation
+    return (
+      <div className="relative w-full h-32 mb-4 flex items-center justify-center">
+        <motion.div
+          animate={{ x: [0, 20, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, repeatType: 'reverse' }}
+          className="w-20 h-12 bg-primary rounded-lg shadow-lg flex items-center justify-center text-white text-lg font-bold relative z-10"
+        >
+          NFC
+        </motion.div>
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 1.5, repeat: Infinity, repeatType: 'reverse' }}
+          className="absolute right-8 w-12 h-20 bg-gray-300 rounded-2xl border-2 border-gray-400 flex items-center justify-center z-0"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="4" fill="#fff" stroke="#bbb" strokeWidth="2" /></svg>
+        </motion.div>
+      </div>
+    );
+  }
+  if (service.title === 'Branding') {
+    // Logo reveal animation
+    return (
+      <div className="flex flex-col items-center mb-4">
+        <motion.div
+          initial={{ scale: 0.7, opacity: 0 }}
+          animate={{ scale: [0.7, 1.1, 1], opacity: [0, 1, 1] }}
+          transition={{ duration: 1.2, repeat: Infinity, repeatType: 'reverse' }}
+          className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-blue-400 flex items-center justify-center shadow-lg"
+        >
+          <svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="#fff" /><text x="16" y="22" textAnchor="middle" fontSize="16" fill="#3496ff" fontWeight="bold">B</text></svg>
+        </motion.div>
+        <span className="text-xs text-gray-500 mt-2">Brand Reveal</span>
+      </div>
+    );
+  }
+  return null;
+};
+
 const FlipCard = ({ service, isFlipped, onClick }) => {
   return (
     <div 
@@ -109,6 +223,8 @@ const FlipCard = ({ service, isFlipped, onClick }) => {
                 </div>
               )}
               <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+              {/* Service-specific animation/demo */}
+              <ServiceDemo service={service} />
               <div className="mt-6">
                 <p className="text-gray-700 text-base">
                   {service.details || service.description}
@@ -318,7 +434,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <Section id="services" bgColor="bg-gray-50">
+    <Section id="services" bgColor="bg-transparent">
       <style>{styles}</style>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -328,7 +444,7 @@ const ServicesSection = () => {
       >
         <SectionTitle>Core Services</SectionTitle>
         <SectionSubtitle>
-          No demos. No hidden fees. Just a seamless experience — think AppleCare simplicity.
+          No demos. No hidden fees. Just a seamless experience.
         </SectionSubtitle>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

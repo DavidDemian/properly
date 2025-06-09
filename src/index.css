@@ -9,7 +9,7 @@
   }
   
   body {
-    background-color: white;
+    @apply bg-gradient-to-br from-blue-50 to-yellow-50 min-h-screen;
     color: #1a202c;
   }
 }
