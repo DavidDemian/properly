@@ -18,7 +18,7 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="container relative z-10 pb-16 md:pb-24 px-4 sm:px-6">
+      <div className="container relative z-10 pb-16 md:pb-24 px-4 sm:px-6 pt-24 md:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
