@@ -38,7 +38,7 @@ const ProperlyLogo = ({ className = '', style = {}, width = 260, height = 64 }) 
     {/* Large wordmark to the right of the icon */}
     <text
       x="80"
-      y="48"
+      y="40"
       fontFamily="'Montserrat', 'Righteous', Arial, sans-serif"
       fontSize="38"
       fontWeight="700"
@@ -49,17 +49,30 @@ const ProperlyLogo = ({ className = '', style = {}, width = 260, height = 64 }) 
       proper
     </text>
     <text
-      x="196"
-      y="48"
+      x="208"
+      y="40"
       fontFamily="'Montserrat', 'Righteous', Arial, sans-serif"
       fontSize="38"
       fontWeight="700"
       fontStyle="italic"
-      letterSpacing="2"
+      letterSpacing="0"
       fill="#FFD700"
       style={{ fontFamily: 'Montserrat, Righteous, Arial, sans-serif', fontWeight: 700, fontStyle: 'italic' }}
     >
-      ly
+      l
+    </text>
+    <text
+      x="214"
+      y="40"
+      fontFamily="'Montserrat', 'Righteous', Arial, sans-serif"
+      fontSize="38"
+      fontWeight="700"
+      fontStyle="italic"
+      letterSpacing="0"
+      fill="#FFD700"
+      style={{ fontFamily: 'Montserrat, Righteous, Arial, sans-serif', fontWeight: 700, fontStyle: 'italic' }}
+    >
+      y
     </text>
   </svg>
 );
