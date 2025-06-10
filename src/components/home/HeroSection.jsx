@@ -22,7 +22,7 @@ const HeroSection = () => {
 
       {/* Logo at the very top, centered */}
       <div className="relative z-20 flex flex-col items-center w-full pt-10 sm:pt-16 mb-4">
-        <ProperlyLogo className="mx-auto w-72 sm:w-96 md:w-[32rem] max-w-full h-auto" />
+        <ProperlyLogo className="mx-auto w-72 sm:w-80 md:w-[32rem] max-w-full h-auto" />
       </div>
 
       {/* Main content grid: left=text/buttons, right=mockup */}
