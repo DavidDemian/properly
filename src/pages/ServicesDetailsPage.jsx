@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProperlyLogo from '../assets/images/ProperlyLogo';
 import { motion, AnimatePresence } from 'framer-motion';
 import Carousel from '../components/Carousel';
@@ -182,6 +182,9 @@ const services = [
 ];
 
 const ServicesDetailsPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, []);
   const [selected, setSelected] = useState(0);
   const featureSlides = [
     {

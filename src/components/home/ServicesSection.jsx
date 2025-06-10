@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Section, { SectionTitle, SectionSubtitle } from '../Section';
 import Card from '../Card';
 import Button from '../Button';
+import { Link } from 'react-router-dom';
 
 // Add custom styles for 3D flip animation
 const styles = `
@@ -289,7 +290,7 @@ const ServicesSection = () => {
           </div>
         </div>
       ),
-      link: '/services/idx-websites'
+      link: '/services'
     },
     {
       id: 2,
@@ -332,7 +333,7 @@ const ServicesSection = () => {
           </div>
         </div>
       ),
-      link: '/services/tapcard'
+      link: '/services'
     },
     {
       id: 4,
@@ -370,7 +371,7 @@ const ServicesSection = () => {
         </div>
       ),
       price: '$100 per listing',
-      link: '/services/virtual-tours'
+      link: '/services'
     },
     {
       id: 5,
@@ -432,7 +433,7 @@ const ServicesSection = () => {
         </div>
       ),
       price: '$100 per listing',
-      link: '/services/virtual-staging'
+      link: '/services'
     }
   ];
 
@@ -470,7 +471,9 @@ const ServicesSection = () => {
         </div>
         {/* Single See Details link below all cards */}
         <div className="flex justify-center mt-6">
-          <a href="/services" className="text-primary underline underline-offset-2 hover:text-secondary transition-colors text-lg font-semibold">See details</a>
+          <Button to="/services" variant="outline" size="lg" className="text-primary border-primary hover:text-secondary transition-colors text-lg font-semibold">
+            See details
+          </Button>
         </div>
       </motion.div>
     </Section>
