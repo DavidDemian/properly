@@ -2,17 +2,17 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
-import ComingSoon from './pages/ComingSoon';
+// import ComingSoon from './pages/ComingSoon';
 import GetStartedPage from './pages/GetStartedPage';
 import OnboardingForm from './pages/OnboardingForm';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const isProduction = process.env.NODE_ENV === 'production';
+// const isProduction = process.env.NODE_ENV === 'production';
 
 function App() {
-  if (isProduction) {
-    return <ComingSoon />;
-  }
+  // if (isProduction) {
+  //   return <ComingSoon />;
+  // }
   return (
     <Router>
       <AnimatePresence mode="wait">
