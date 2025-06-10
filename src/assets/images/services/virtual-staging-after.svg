@@ -1,0 +1,30 @@
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Floor -->
+  <rect x="40" y="220" width="400" height="40" rx="8" fill="#e5e4e2"/>
+  <!-- Left wall -->
+  <polygon points="40,220 40,60 240,40 240,220" fill="#ececec"/>
+  <!-- Right wall -->
+  <polygon points="240,40 440,60 440,220 240,220" fill="#e0e0e0"/>
+  <!-- Back wall -->
+  <rect x="40" y="60" width="400" height="160" fill="#f7f7f7"/>
+  <!-- Window -->
+  <rect x="320" y="90" width="60" height="40" rx="4" fill="#dbeafe" stroke="#b6c6d6" stroke-width="2"/>
+  <!-- Door -->
+  <rect x="70" y="150" width="36" height="70" rx="4" fill="#e5e4e2" stroke="#bdbdbd" stroke-width="2"/>
+  <!-- Bed -->
+  <rect x="170" y="180" width="140" height="40" rx="10" fill="#3496ff"/>
+  <rect x="185" y="190" width="110" height="20" rx="6" fill="#fff"/>
+  <!-- Pillows -->
+  <rect x="185" y="185" width="30" height="10" rx="4" fill="#FFB400"/>
+  <rect x="265" y="185" width="30" height="10" rx="4" fill="#222"/>
+  <!-- Nightstand -->
+  <rect x="320" y="210" width="24" height="18" rx="4" fill="#222"/>
+  <!-- Lamp -->
+  <rect x="330" y="195" width="6" height="15" rx="2" fill="#FFB400"/>
+  <ellipse cx="333" cy="195" rx="10" ry="5" fill="#3496ff"/>
+  <!-- Rug -->
+  <ellipse cx="240" cy="240" rx="60" ry="10" fill="#FFB400"/>
+  <!-- Plant -->
+  <rect x="120" y="210" width="10" height="18" rx="3" fill="#3496ff"/>
+  <ellipse cx="125" cy="210" rx="10" ry="6" fill="#a0d995"/>
+</svg> 

@@ -8,9 +8,9 @@ const VirtualToursSection = () => {
     <Section id="virtual-tours">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <SectionTitle centered={false}>360° Virtual Tours</SectionTitle>
+          <SectionTitle centered={false}>Tours</SectionTitle>
           <SectionSubtitle centered={false}>
-            Immersive virtual tours that showcase properties in stunning detail, giving potential buyers a realistic view of listings.
+            Immersive tours that showcase properties in stunning detail, giving potential buyers a realistic view of listings.
           </SectionSubtitle>
           
           <div className="mt-8 space-y-6">
@@ -23,7 +23,7 @@ const VirtualToursSection = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Increased Engagement</h3>
                 <p className="text-gray-600">
-                  Virtual tours keep potential buyers engaged 5-10x longer than traditional photos, increasing the likelihood of inquiries.
+                  Tours keep potential buyers engaged 5-10x longer than traditional photos, increasing the likelihood of inquiries.
                 </p>
               </div>
             </div>
@@ -37,7 +37,7 @@ const VirtualToursSection = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Pre-Qualified Buyers</h3>
                 <p className="text-gray-600">
-                  Virtual tours help pre-qualify buyers by giving them a realistic view of the property before in-person showings.
+                  Tours help pre-qualify buyers by giving them a realistic view of the property before in-person showings.
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ const VirtualToursSection = () => {
           
           <div className="mt-8">
             <Button to="/services/virtual-tours">
-              Learn More About Virtual Tours
+              Learn More About Tours
             </Button>
           </div>
         </div>

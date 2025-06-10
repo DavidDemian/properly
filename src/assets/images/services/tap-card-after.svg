@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Phone -->
+    <g transform="translate(400, 250) rotate(-15)">
+        <!-- Phone shadow -->
+        <rect x="-45" y="-85" width="90" height="170" rx="12" fill="#000" opacity="0.10"/>
+        <!-- Phone body -->
+        <rect x="-40" y="-80" width="80" height="160" rx="10" fill="#222"/>
+        <rect x="-35" y="-75" width="70" height="150" rx="5" fill="#FFFFFF"/>
+        <!-- Phone screen -->
+        <rect x="-30" y="-70" width="60" height="140" rx="2" fill="#3496ff"/>
+        <!-- Phone camera -->
+        <circle cx="0" cy="-60" r="3" fill="#222"/>
+        <!-- Phone button -->
+        <rect x="-5" y="60" width="10" height="2" rx="1" fill="#222"/>
+        <!-- Phone screen content: Realtor profile and links -->
+        <g transform="translate(-25, -60)">
+            <rect x="0" y="0" width="50" height="120" rx="2" fill="#fff" opacity="0.95"/>
+            <circle cx="25" cy="18" r="12" fill="#FFB400"/>
+            <rect x="10" y="38" width="30" height="6" rx="3" fill="#3496ff"/>
+            <rect x="10" y="48" width="20" height="4" rx="2" fill="#222" opacity="0.7"/>
+            <rect x="10" y="56" width="28" height="4" rx="2" fill="#222" opacity="0.5"/>
+            <!-- Property links icons -->
+            <rect x="10" y="70" width="8" height="8" rx="2" fill="#FFB400"/>
+            <rect x="22" y="70" width="8" height="8" rx="2" fill="#3496ff"/>
+            <rect x="34" y="70" width="8" height="8" rx="2" fill="#222"/>
+        </g>
+    </g>
+    <!-- TapCard -->
+    <g transform="translate(400, 350)">
+        <!-- Card shadow -->
+        <rect x="-65" y="-45" width="130" height="90" rx="12" fill="#000" opacity="0.10"/>
+        <!-- Card body -->
+        <rect x="-60" y="-40" width="120" height="80" rx="10" fill="#3496ff"/>
+        <!-- Card gradient overlay -->
+        <rect x="-60" y="-40" width="120" height="80" rx="10" fill="url(#gradient)" opacity="0.10"/>
+        <!-- Card chip -->
+        <rect x="-25" y="-25" width="50" height="35" rx="6" fill="#FFB400"/>
+        <!-- NFC wave icon -->
+        <path d="M-40 -10 Q-30 -20 -20 -10 T0 -10 T20 -10 T40 -10" stroke="#fff" stroke-width="2" fill="none"/>
+        <!-- Decorative logo box (black) still present, but no text -->
+        <rect x="-10" y="28" width="20" height="8" rx="2" fill="#222"/>
+    </g>
+    <!-- Connection waves -->
+    <g transform="translate(400, 300)">
+        <!-- Primary wave -->
+        <circle cx="0" cy="0" r="20" stroke="#3496ff" stroke-width="2" fill="none" opacity="0.5">
+            <animate attributeName="r" from="20" to="40" dur="1.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.5" to="0" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Secondary wave -->
+        <circle cx="0" cy="0" r="30" stroke="#FFB400" stroke-width="2" fill="none" opacity="0.3">
+            <animate attributeName="r" from="30" to="50" dur="1.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" from="0.3" to="0" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Connection line -->
+        <line x1="0" y1="-20" x2="0" y2="20" stroke="#222" stroke-width="2" stroke-dasharray="4 4">
+            <animate attributeName="stroke-dashoffset" from="0" to="8" dur="0.5s" repeatCount="indefinite"/>
+        </line>
+    </g>
+    <!-- Gradient definition -->
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#000000" stop-opacity="0.1"/>
+        </linearGradient>
+    </defs>
+</svg> 

@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../Button';
 import ProperlyLogo from '../../assets/images/ProperlyLogo';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const scrollToSection = (sectionId) => {
@@ -47,9 +48,11 @@ const HeroSection = () => {
             <Button onClick={() => scrollToSection('pricing')} size="lg" className="w-full sm:w-auto">
               Pick Your Plan
             </Button>
-            <Button onClick={() => scrollToSection('services')} variant="outline" size="lg" className="w-full sm:w-auto">
-              Explore Services
-            </Button>
+            <Link to="/services" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                Explore Services
+              </Button>
+            </Link>
           </div>
         </motion.div>
 
@@ -58,12 +61,54 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="w-full md:w-1/2 flex flex-col items-center mt-10 md:mt-0"
+          className="w-full md:w-1/2 flex flex-col items-center mt-10 md:mt-0 relative"
         >
-          {/* IDX Animation badge */}
-          <div className="mb-2">
-            <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full shadow-sm">IDX Animation</span>
-          </div>
+          {/* Floating animated elements - only on md+ screens */}
+          <motion.div
+            className="hidden md:block absolute -top-8 -left-8 z-20"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <div className="bg-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="#3496ff">
+                <rect x="4" y="5" width="16" height="10" rx="2" />
+                <rect x="8" y="17" width="8" height="2" rx="1" />
+                <rect x="10" y="19" width="4" height="2" rx="1" />
+              </svg>
+              <span className="font-semibold text-sm text-primary">IDX Websites</span>
+            </div>
+          </motion.div>
+          <motion.div
+            className="hidden md:block absolute -top-8 right-0 z-20"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+          >
+            <div className="bg-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="#3496ff">
+                <rect x="4" y="8" width="16" height="8" rx="2" />
+                <rect x="7" y="6" width="10" height="4" rx="2" />
+                <circle cx="12" cy="12" r="2" fill="#fff" />
+              </svg>
+              <span className="font-semibold text-sm text-primary">Tours</span>
+            </div>
+          </motion.div>
+          <motion.div
+            className="hidden md:block absolute -bottom-8 left-1/2 -translate-x-1/2 z-20"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          >
+            <div className="bg-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="6" width="18" height="12" rx="3" fill="#3496ff" />
+                <circle cx="8" cy="12" r="2" fill="#fff" />
+                <rect x="12" y="10" width="6" height="1.5" rx="0.75" fill="#fff" />
+                <rect x="12" y="13" width="4" height="1.2" rx="0.6" fill="#fff" />
+              </svg>
+              <span className="font-semibold text-sm text-primary">Smart Cards</span>
+            </div>
+          </motion.div>
+          {/* End floating elements */}
+
           <div className="bg-white p-2 sm:p-4 rounded-lg shadow-xl w-full max-w-md">
             <div className="aspect-[4/3] rounded-lg overflow-hidden bg-white">
               {/* Real Estate Website Mockup */}

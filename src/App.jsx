@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import ComingSoon from './pages/ComingSoon';
 import GetStartedPage from './pages/GetStartedPage';
 import OnboardingForm from './pages/OnboardingForm';
+import ServicesDetailsPage from './pages/ServicesDetailsPage';
 import { AnimatePresence, motion } from 'framer-motion';
 
 // Temporarily disabled for sharing
@@ -23,6 +24,7 @@ function App() {
             <Route index element={<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}><HomePage /></motion.div>} />
             <Route path="get-started" element={<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}><GetStartedPage /></motion.div>} />
             <Route path="get-started/onboarding" element={<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}><OnboardingForm /></motion.div>} />
+            <Route path="services" element={<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}><ServicesDetailsPage /></motion.div>} />
             <Route path="*" element={<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }}><div className="container py-20 text-center"><h1 className="text-3xl font-bold">Page Not Found</h1></div></motion.div>} />
           </Route>
         </Routes>

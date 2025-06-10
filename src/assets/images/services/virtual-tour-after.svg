@@ -1,0 +1,34 @@
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Browser window background -->
+  <rect width="480" height="320" rx="24" fill="#F3F6FA"/>
+  <!-- Browser top bar -->
+  <rect x="0" y="0" width="480" height="36" rx="12" fill="#E5EAF2"/>
+  <!-- Browser buttons -->
+  <circle cx="24" cy="18" r="6" fill="#D1D9E6"/>
+  <circle cx="44" cy="18" r="6" fill="#E5EAF2"/>
+  <circle cx="64" cy="18" r="6" fill="#D1D9E6"/>
+  <!-- Photo frame -->
+  <rect x="40" y="56" width="400" height="220" rx="16" stroke="#D1D9E6" stroke-width="2"/>
+  <!-- Living room scene (brand colors) -->
+  <!-- Wall/window -->
+  <rect x="80" y="80" width="120" height="60" rx="8" fill="#dbeafe"/>
+  <rect x="100" y="100" width="40" height="24" rx="4" fill="#fff" stroke="#3496ff" stroke-width="1"/>
+  <!-- Sofa -->
+  <rect x="180" y="180" width="140" height="36" rx="14" fill="#3496ff"/>
+  <rect x="200" y="168" width="60" height="16" rx="6" fill="#FFD700"/>
+  <!-- Plant -->
+  <ellipse cx="340" cy="220" rx="12" ry="18" fill="#22c55e"/>
+  <rect x="334" y="238" width="12" height="8" rx="4" fill="#FFD700"/>
+  <!-- Rug -->
+  <ellipse cx="250" cy="240" rx="60" ry="10" fill="#FFD700"/>
+  
+  <!-- 360° globe icon overlay (moved up, smaller) -->
+  <g>
+    <circle cx="250" cy="125" r="26" stroke="#3496ff" stroke-width="2.5" fill="none"/>
+    <ellipse cx="250" cy="125" rx="26" ry="10" stroke="#3496ff" stroke-width="2.5" fill="none"/>
+    <ellipse cx="250" cy="125" rx="10" ry="26" stroke="#3496ff" stroke-width="2.5" fill="none"/>
+    <ellipse cx="250" cy="125" rx="26" ry="18" stroke="#3496ff" stroke-width="2.5" fill="none" transform="rotate(30 250 125)"/>
+    <ellipse cx="250" cy="125" rx="26" ry="18" stroke="#3496ff" stroke-width="2.5" fill="none" transform="rotate(-30 250 125)"/>
+    <text x="250" y="130" text-anchor="middle" font-size="15" font-family="Arial, Helvetica, sans-serif" fill="#3496ff" font-weight="bold">360<tspan fill="#FFD700">°</tspan></text>
+  </g>
+</svg> 

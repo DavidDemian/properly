@@ -1,0 +1,33 @@
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Browser window background -->
+  <rect width="480" height="320" rx="24" fill="#F3F6FA"/>
+  <!-- Browser top bar -->
+  <rect x="0" y="0" width="480" height="36" rx="12" fill="#E5EAF2"/>
+  <!-- Browser buttons -->
+  <circle cx="24" cy="18" r="6" fill="#D1D9E6"/>
+  <circle cx="44" cy="18" r="6" fill="#E5EAF2"/>
+  <circle cx="64" cy="18" r="6" fill="#D1D9E6"/>
+  <!-- Webpage content area -->
+  <rect x="24" y="48" width="432" height="240" rx="16" fill="#fff" stroke="#D1D9E6" stroke-width="2"/>
+  <!-- Search bar -->
+  <rect x="56" y="72" width="368" height="28" rx="14" fill="#E5EAF2"/>
+  <rect x="72" y="78" width="120" height="16" rx="8" fill="#fff"/>
+  <!-- Property cards -->
+  <rect x="80" y="120" width="88" height="110" rx="10" fill="#F6F8FB" stroke="#D1D9E6" stroke-width="2"/>
+  <rect x="196" y="120" width="88" height="110" rx="10" fill="#F6F8FB" stroke="#D1D9E6" stroke-width="2"/>
+  <rect x="312" y="120" width="88" height="110" rx="10" fill="#F6F8FB" stroke="#D1D9E6" stroke-width="2"/>
+  <!-- Card images -->
+  <rect x="92" y="132" width="64" height="48" rx="6" fill="#dbeafe"/>
+  <rect x="208" y="132" width="64" height="48" rx="6" fill="#dbeafe"/>
+  <rect x="324" y="132" width="64" height="48" rx="6" fill="#dbeafe"/>
+  <!-- Card titles -->
+  <rect x="92" y="186" width="64" height="12" rx="4" fill="#E5EAF2"/>
+  <rect x="208" y="186" width="64" height="12" rx="4" fill="#E5EAF2"/>
+  <rect x="324" y="186" width="64" height="12" rx="4" fill="#E5EAF2"/>
+  <!-- Card accent bars -->
+  <rect x="104" y="214" width="40" height="8" rx="4" fill="#3496ff"/>
+  <rect x="220" y="214" width="40" height="8" rx="4" fill="#FFD700"/>
+  <rect x="336" y="214" width="40" height="8" rx="4" fill="#3496ff"/>
+  <!-- Properly IDX label -->
+  <text x="240" y="32" text-anchor="middle" font-size="18" font-family="Arial, sans-serif" fill="#3496ff">Properly IDX</text>
+</svg> 

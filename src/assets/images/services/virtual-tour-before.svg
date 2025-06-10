@@ -1,0 +1,24 @@
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Browser window background -->
+  <rect width="480" height="320" rx="24" fill="#f3f4f6"/>
+  <!-- Browser top bar -->
+  <rect x="0" y="0" width="480" height="36" rx="12" fill="#e5e7eb"/>
+  <!-- Browser buttons -->
+  <circle cx="24" cy="18" r="6" fill="#d1d5db"/>
+  <circle cx="44" cy="18" r="6" fill="#e5e7eb"/>
+  <circle cx="64" cy="18" r="6" fill="#d1d5db"/>
+  <!-- Photo frame -->
+  <rect x="40" y="56" width="400" height="220" rx="16" stroke="#d1d5db" stroke-width="2"/>
+  <!-- Living room scene (neutral colors) -->
+  <!-- Wall/window -->
+  <rect x="80" y="80" width="120" height="60" rx="8" fill="#e5e7eb"/>
+  <rect x="100" y="100" width="40" height="24" rx="4" fill="#fff" stroke="#d1d5db" stroke-width="1"/>
+  <!-- Sofa -->
+  <rect x="180" y="180" width="140" height="36" rx="14" fill="#d1d5db"/>
+  <rect x="200" y="168" width="60" height="16" rx="6" fill="#e5e7eb"/>
+  <!-- Plant -->
+  <ellipse cx="340" cy="220" rx="12" ry="18" fill="#d1d5db"/>
+  <rect x="334" y="238" width="12" height="8" rx="4" fill="#e5e7eb"/>
+  <!-- Rug -->
+  <ellipse cx="250" cy="240" rx="60" ry="10" fill="#e5e7eb"/>
+</svg> 

@@ -1,0 +1,33 @@
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Browser window background -->
+  <rect width="480" height="320" rx="24" fill="#f3f4f6"/>
+  <!-- Browser top bar -->
+  <rect x="0" y="0" width="480" height="36" rx="12" fill="#e5e7eb"/>
+  <!-- Browser buttons -->
+  <circle cx="24" cy="18" r="6" fill="#d1d5db"/>
+  <circle cx="44" cy="18" r="6" fill="#e5e7eb"/>
+  <circle cx="64" cy="18" r="6" fill="#d1d5db"/>
+  <!-- Webpage content area -->
+  <rect x="24" y="48" width="432" height="240" rx="16" fill="#fff" stroke="#d1d5db" stroke-width="2"/>
+  <!-- Sidebar -->
+  <rect x="36" y="60" width="60" height="200" rx="10" fill="#f3f4f6"/>
+  <!-- Sidebar nav items -->
+  <rect x="44" y="70" width="44" height="16" rx="4" fill="#e5e7eb"/>
+  <rect x="44" y="94" width="44" height="16" rx="4" fill="#e5e7eb"/>
+  <rect x="44" y="118" width="44" height="16" rx="4" fill="#e5e7eb"/>
+  <!-- Main header -->
+  <rect x="110" y="60" width="220" height="28" rx="6" fill="#e5e7eb"/>
+  <!-- Subheader -->
+  <rect x="110" y="96" width="180" height="16" rx="4" fill="#f3f4f6"/>
+  <!-- Content blocks -->
+  <rect x="110" y="124" width="320" height="24" rx="6" fill="#e5e7eb"/>
+  <rect x="110" y="156" width="320" height="16" rx="4" fill="#f3f4f6"/>
+  <rect x="110" y="180" width="320" height="16" rx="4" fill="#e5e7eb"/>
+  <rect x="110" y="204" width="320" height="16" rx="4" fill="#f3f4f6"/>
+  <rect x="110" y="228" width="320" height="16" rx="4" fill="#e5e7eb"/>
+  <!-- Footer -->
+  <rect x="110" y="252" width="180" height="12" rx="4" fill="#e5e7eb"/>
+  <!-- WordPress logo -->
+  <circle cx="440" cy="36" r="14" fill="#21759b"/>
+  <text x="440" y="44" text-anchor="middle" font-size="16" font-family="Arial, sans-serif" fill="#fff" font-weight="bold">W</text>
+</svg> 

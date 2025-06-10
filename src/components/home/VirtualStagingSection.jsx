@@ -156,7 +156,7 @@ const VirtualStagingSection = () => {
         </motion.div>
         
         <div className="order-1 lg:order-2">
-          <SectionTitle centered={false}>Virtual Staging</SectionTitle>
+          <SectionTitle centered={false}>Staging</SectionTitle>
           <SectionSubtitle centered={false}>
             Upload a photo, choose a style, and get professionally staged results. Perfect for showcasing a property's potential.
           </SectionSubtitle>
@@ -221,7 +221,7 @@ const VirtualStagingSection = () => {
           
           <div className="mt-8">
             <Button to="/services/virtual-staging">
-              Learn More About Virtual Staging
+              Learn More About Staging
             </Button>
           </div>
         </div>

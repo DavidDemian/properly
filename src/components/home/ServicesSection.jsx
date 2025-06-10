@@ -51,14 +51,6 @@ const styles = `
     transform: translateY(10px);
     transition: all 0.3s ease;
   }
-  @media (max-width: 640px) {
-    .flip-card {
-      perspective: none;
-    }
-    .flip-card-inner {
-      transform-style: flat;
-    }
-  }
 `;
 
 // Service-specific animation components
@@ -135,7 +127,7 @@ const ServiceDemo = ({ service }) => {
       </div>
     );
   }
-  if (service.title === 'NFC Business Card') {
+  if (service.title === 'tapCard') {
     // Card tap animation
     return (
       <div className="relative w-full h-32 mb-4 flex items-center justify-center">
@@ -144,7 +136,7 @@ const ServiceDemo = ({ service }) => {
           transition={{ duration: 1.5, repeat: Infinity, repeatType: 'reverse' }}
           className="w-20 h-12 bg-primary rounded-lg shadow-lg flex items-center justify-center text-white text-lg font-bold relative z-10"
         >
-          NFC
+          tapCard
         </motion.div>
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
@@ -202,13 +194,7 @@ const FlipCard = ({ service, isFlipped, onClick }) => {
                 ))}
               </ul>
             </div>
-            <div className="px-8 pb-6">
-              <span className="text-primary font-medium text-base flex items-center gap-1 underline underline-offset-2">
-                Learn more
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
+            <div className="px-8 pb-6 flex flex-col items-center gap-2">
             </div>
           </div>
         </div>
@@ -277,8 +263,10 @@ const ServicesSection = () => {
         'Includes listings, mortgage calculator, and contact form'
       ],
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="#3496ff">
+          <rect x="4" y="5" width="16" height="10" rx="2" />
+          <rect x="8" y="17" width="8" height="2" rx="1" />
+          <rect x="10" y="19" width="4" height="2" rx="1" />
         </svg>
       ),
       image: (
@@ -305,8 +293,8 @@ const ServicesSection = () => {
     },
     {
       id: 2,
-      title: 'NFC Business Card',
-      description: 'Smart NFC cards that connect to your personal landing page.',
+      title: 'tapCard',
+      description: 'Smart tapCard that connects to your personal landing page.',
       summaryFeatures: [
         'Tap-to-share digital business cards',
         'Link directly to the agent\'s Properly site or listings',
@@ -318,8 +306,11 @@ const ServicesSection = () => {
         'Professional and modern design'
       ],
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="6" width="18" height="12" rx="3" fill="#3496ff" />
+          <circle cx="8" cy="12" r="2" fill="#fff" />
+          <rect x="12" y="10" width="6" height="1.5" rx="0.75" fill="#fff" />
+          <rect x="12" y="13" width="4" height="1.2" rx="0.6" fill="#fff" />
         </svg>
       ),
       image: (
@@ -334,18 +325,18 @@ const ServicesSection = () => {
                   (555) 123-4567
                 </div>
                 <div className="absolute bottom-3 right-3 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                  <div className="text-[6px]">NFC</div>
+                  <div className="text-[6px]">tapCard</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       ),
-      link: '/services/nfc-cards'
+      link: '/services/tapcard'
     },
     {
       id: 4,
-      title: 'Virtual Tours',
+      title: 'Tours',
       description: 'Immersive 360° virtual tours that bring listings to life.',
       summaryFeatures: [
         '360° walk-throughs',
@@ -358,8 +349,10 @@ const ServicesSection = () => {
         'Optimized for all devices'
       ],
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 24 24" fill="#3496ff">
+          <rect x="4" y="8" width="16" height="8" rx="2" />
+          <rect x="7" y="6" width="10" height="4" rx="2" />
+          <circle cx="12" cy="12" r="2" fill="#fff" />
         </svg>
       ),
       image: (
@@ -381,7 +374,7 @@ const ServicesSection = () => {
     },
     {
       id: 5,
-      title: 'Virtual Staging',
+      title: 'Staging',
       description: 'Help buyers envision the space with digital furniture and decor.',
       summaryFeatures: [
         'Upload photo > Choose style > Get staged results',
@@ -394,8 +387,18 @@ const ServicesSection = () => {
         'High-quality renders'
       ],
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" viewBox="0 0 48 48" fill="none">
+          {/* Sofa base */}
+          <rect x="8" y="24" width="32" height="12" rx="4" fill="#3496ff"/>
+          {/* Sofa back */}
+          <rect x="12" y="18" width="24" height="8" rx="3" fill="#60a5fa"/>
+          {/* Sofa legs */}
+          <rect x="12" y="36" width="4" height="6" rx="1" fill="#bbb"/>
+          <rect x="32" y="36" width="4" height="6" rx="1" fill="#bbb"/>
+          {/* Lamp stand */}
+          <rect x="40" y="14" width="2" height="14" rx="1" fill="#bbb"/>
+          {/* Lamp shade */}
+          <ellipse cx="41" cy="14" rx="4" ry="3" fill="#FFD700"/>
         </svg>
       ),
       image: (
@@ -464,6 +467,10 @@ const ServicesSection = () => {
               />
             </motion.div>
           ))}
+        </div>
+        {/* Single See Details link below all cards */}
+        <div className="flex justify-center mt-6">
+          <a href="/services" className="text-primary underline underline-offset-2 hover:text-secondary transition-colors text-lg font-semibold">See details</a>
         </div>
       </motion.div>
     </Section>

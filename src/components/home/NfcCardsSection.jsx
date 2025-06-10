@@ -5,7 +5,7 @@ import Button from '../Button';
 
 const NfcCardsSection = () => {
   return (
-    <Section id="nfc-cards" bgColor="bg-gray-50">
+    <Section id="tapcard" bgColor="bg-gray-50">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -14,7 +14,7 @@ const NfcCardsSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="order-2 lg:order-1 relative"
         >
-          {/* NFC Card Mockup */}
+          {/* tapCard Mockup */}
           <div className="relative mx-auto max-w-sm">
             {/* Business Card */}
             <div className="relative z-20 bg-white rounded-lg shadow-xl overflow-hidden aspect-[1.586/1] transform rotate-6">
@@ -31,7 +31,7 @@ const NfcCardsSection = () => {
                       <p className="text-xs text-white/80">(555) 123-4567</p>
                     </div>
                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="text-xs text-center">NFC<br/>Enabled</span>
+                      <span className="text-xs text-center">tapCard<br/>Enabled</span>
                     </div>
                   </div>
                 </div>
@@ -103,9 +103,9 @@ const NfcCardsSection = () => {
         </motion.div>
         
         <div className="order-1 lg:order-2">
-          <SectionTitle centered={false}>NFC Business Cards</SectionTitle>
+          <SectionTitle centered={false}>tapCard</SectionTitle>
           <SectionSubtitle centered={false}>
-            Modern digital business cards with NFC technology that instantly connect clients to your digital presence.
+            Modern digital business cards with tapCard technology that instantly connect clients to your digital presence.
           </SectionSubtitle>
           
           <div className="mt-8 space-y-6">
@@ -132,7 +132,7 @@ const NfcCardsSection = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-2">Listing Flyers</h3>
                 <p className="text-gray-600">
-                  Showcase your property listings with digital flyers that include photos, details, and virtual tours.
+                  Showcase your property listings with digital flyers that include photos, details, and tours.
                 </p>
               </div>
             </div>

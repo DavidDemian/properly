@@ -217,8 +217,8 @@ function ContactFormModal({ open, onClose }) {
             <label className="block font-serif text-lg mb-1">Services Interested In</label>
             <div className="flex flex-wrap gap-2">
               <label className="inline-flex items-center"><input type="checkbox" value="IDX site" {...register('services')} className="form-checkbox text-primary" /> <span className="ml-2">IDX site</span></label>
-              <label className="inline-flex items-center"><input type="checkbox" value="NFC cards" {...register('services')} className="form-checkbox text-primary" /> <span className="ml-2">NFC cards</span></label>
-              <label className="inline-flex items-center"><input type="checkbox" value="Virtual tour" {...register('services')} className="form-checkbox text-primary" /> <span className="ml-2">Virtual tour</span></label>
+              <label className="inline-flex items-center"><input type="checkbox" value="tapCard" {...register('services')} className="form-checkbox text-primary" /> <span className="ml-2">tapCard</span></label>
+              <label className="inline-flex items-center"><input type="checkbox" value="Tour" {...register('services')} className="form-checkbox text-primary" /> <span className="ml-2">Tour</span></label>
               <label className="inline-flex items-center"><input type="checkbox" value="Staging" {...register('services')} className="form-checkbox text-primary" /> <span className="ml-2">Staging</span></label>
               <label className="inline-flex items-center"><input type="checkbox" value="Other" {...register('services')} className="form-checkbox text-primary" /> <span className="ml-2">Other</span></label>
             </div>
@@ -587,6 +587,11 @@ const GetStartedPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-transparent px-2 py-8">
+      <div className="w-full flex justify-center mb-8 mt-4">
+        <Link to="/">
+          <ProperlyLogo className="w-48 sm:w-64 md:w-80 max-w-full h-auto cursor-pointer" />
+        </Link>
+      </div>
       <div className="w-full max-w-xl flex flex-col items-center mx-auto px-2 sm:px-4">
         <motion.div
           initial={{ rotateY: 0 }}

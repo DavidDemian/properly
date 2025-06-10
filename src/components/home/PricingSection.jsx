@@ -15,11 +15,11 @@ const PricingSection = () => {
       features: [
         { name: 'IDX website', included: true },
         { name: 'Smart business card', included: true },
-        { name: 'Virtual tour', included: false },
-        { name: 'Virtual staging', included: false },
+        { name: 'Tour', included: false },
+        { name: 'Staging', included: false },
       ],
       turnaround: '7 business days',
-      deliverables: 'Website link, 5 NFC cards',
+      deliverables: 'Website link, 5 tapCard',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -37,11 +37,11 @@ const PricingSection = () => {
       features: [
         { name: 'IDX website', included: true },
         { name: 'Smart business card', included: true },
-        { name: 'Virtual staging', included: true },
-        { name: 'Virtual tour', included: false },
+        { name: 'Staging', included: true },
+        { name: 'Tour', included: false },
       ],
       turnaround: '5 business days',
-      deliverables: 'Website link, 10 NFC cards, 1 virtual staging per month',
+      deliverables: 'Website link, 10 tapCard, 1 staging per month',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -60,11 +60,11 @@ const PricingSection = () => {
       features: [
         { name: 'IDX website', included: true },
         { name: 'Smart business card', included: true },
-        { name: 'Virtual tour', included: true },
-        { name: 'Virtual staging', included: true },
+        { name: 'Tour', included: true },
+        { name: 'Staging', included: true },
       ],
       turnaround: '3 business days',
-      deliverables: 'Website link, 20 NFC cards, 2 virtual tours & 3 virtual stagings per month',
+      deliverables: 'Website link, 20 tapCard, 2 tours & 3 stagings per month',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />

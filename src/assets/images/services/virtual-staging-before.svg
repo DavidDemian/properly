@@ -1,0 +1,14 @@
+<svg width="480" height="320" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Floor -->
+  <rect x="40" y="220" width="400" height="40" rx="8" fill="#e5e4e2"/>
+  <!-- Left wall -->
+  <polygon points="40,220 40,60 240,40 240,220" fill="#ececec"/>
+  <!-- Right wall -->
+  <polygon points="240,40 440,60 440,220 240,220" fill="#e0e0e0"/>
+  <!-- Back wall -->
+  <rect x="40" y="60" width="400" height="160" fill="#f7f7f7"/>
+  <!-- Window -->
+  <rect x="320" y="90" width="60" height="40" rx="4" fill="#dbeafe" stroke="#b6c6d6" stroke-width="2"/>
+  <!-- Door -->
+  <rect x="70" y="150" width="36" height="70" rx="4" fill="#e5e4e2" stroke="#bdbdbd" stroke-width="2"/>
+</svg> 
