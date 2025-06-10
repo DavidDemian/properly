@@ -11,124 +11,104 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-yellow-50 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center bg-gradient-to-br from-blue-50 to-yellow-50 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+        {/* Decorative dashed circle, more subtle */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110vw] h-[110vw] max-w-[600px] max-h-[600px] rounded-full border-4 border-dashed border-gray-200 opacity-40 z-0"></div>
       </div>
-      
-      <div className="container relative z-10 pb-16 md:pb-24 px-4 sm:px-6 pt-24 md:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center lg:text-left order-2 lg:order-1"
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              Marketing Tools. 
-              <span className="text-primary"> Done Properly.</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 mb-3 sm:mb-4 max-w-lg mx-auto lg:mx-0">
-              Websites. Tours. Staging. Smart Cards. All in one place.
-            </p>
-            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0">
-              We don't hide our pricing or require demos. What you see is what you get — and what you get is everything you need.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-              <Button onClick={() => scrollToSection('pricing')} size="lg" className="w-full sm:w-auto">
-                Pick Your Plan
-              </Button>
-              <Button onClick={() => scrollToSection('services')} variant="outline" size="lg" className="w-full sm:w-auto">
-                Explore Services
-              </Button>
-            </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative order-1 lg:order-2 mb-8 lg:mb-0"
-          >
-            <div className="relative z-10 bg-white p-3 sm:p-4 rounded-lg shadow-xl">
-              <div className="aspect-[4/3] rounded-lg overflow-hidden bg-white">
-                {/* Real Estate Website Mockup */}
-                <div className="w-full h-full relative">
-                  {/* Website Header */}
-                  <div className="h-[15%] bg-white border-b border-gray-200 flex items-center px-3 sm:px-4">
-                    <div className="w-20 sm:w-24 h-5 sm:h-6 bg-primary rounded"></div>
-                    <div className="ml-auto flex space-x-2 sm:space-x-4">
-                      <div className="w-12 sm:w-16 h-4 sm:h-5 bg-gray-100 rounded"></div>
-                      <div className="w-12 sm:w-16 h-4 sm:h-5 bg-gray-100 rounded"></div>
-                      <div className="w-16 sm:w-20 h-4 sm:h-5 bg-gray-100 rounded"></div>
-                      <div className="w-20 sm:w-24 h-6 sm:h-8 bg-primary rounded-full"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Hero Banner */}
-                  <div className="h-[30%] bg-gradient-to-r from-blue-600 to-blue-400 flex items-center px-4 sm:px-6">
-                    <div className="w-full">
-                      <div className="w-3/4 h-5 sm:h-6 bg-white rounded mb-2"></div>
-                      <div className="w-1/2 h-3 sm:h-4 bg-white/80 rounded mb-3"></div>
-                      <div className="w-28 sm:w-32 h-6 sm:h-8 bg-white rounded-full"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Property Listings */}
-                  <div className="p-3 sm:p-4">
-                    <div className="w-40 sm:w-48 h-5 sm:h-6 bg-gray-800 rounded mb-3 sm:mb-4"></div>
-                    <div className="grid grid-cols-3 gap-2 sm:gap-4">
-                      {/* Property Cards */}
-                      {[1, 2, 3].map((i) => (
-                        <div key={i} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                          <div className="h-20 sm:h-24 bg-blue-100"></div>
-                          <div className="p-2">
-                            <div className="w-full h-4 sm:h-5 bg-blue-50 rounded mb-1 sm:mb-2"></div>
-                            <div className="w-2/3 h-3 sm:h-4 bg-gray-100 rounded"></div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Floating elements - hidden on mobile */}
-              <div className="hidden md:block absolute -bottom-6 -left-6 bg-white p-3 rounded-lg shadow-lg">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium">IDX Websites</p>
-                    <p className="text-xs text-gray-500">Custom & Responsive</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="hidden md:block absolute -top-6 -right-6 bg-white p-3 rounded-lg shadow-lg">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center text-gray-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium">Virtual Tours</p>
-                    <p className="text-xs text-gray-500">360° Experience</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full border-8 border-dashed border-gray-200"></div>
-          </motion.div>
+
+      {/* Logo (IDX animation) - centered above mockup */}
+      <div className="relative z-20 flex flex-col items-center w-full pt-10 sm:pt-16">
+        {/* Replace with your logo component or SVG */}
+        <div className="mx-auto mb-4 w-24 h-16 flex items-center justify-center">
+          {/* Example: <ProperlyLogo /> or SVG */}
+          <svg width="90" height="48" viewBox="0 0 90 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="90" height="48" rx="8" fill="#fff"/>
+            <text x="15" y="32" fontFamily="Arial Black, Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#222">prope</text>
+            <text x="70" y="32" fontFamily="Arial Black, Arial, sans-serif" fontSize="32" fontWeight="bold" fill="#FFD600">rly</text>
+            <rect x="8" y="8" width="16" height="16" rx="4" fill="#1976D2"/>
+            <polyline points="12,16 16,20 22,12" stroke="#FFD600" strokeWidth="2.5" fill="none"/>
+          </svg>
         </div>
+        {/* Optional: IDX animation or badge below logo */}
+        <div className="mb-2">
+          <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full shadow-sm">IDX Animation</span>
+        </div>
+      </div>
+
+      {/* Mockup - centered below logo */}
+      <div className="relative z-10 w-full flex justify-center mt-2 mb-6 px-2">
+        <div className="bg-white p-2 sm:p-4 rounded-lg shadow-xl w-full max-w-md">
+          <div className="aspect-[4/3] rounded-lg overflow-hidden bg-white">
+            {/* Real Estate Website Mockup */}
+            <div className="w-full h-full relative">
+              {/* Website Header */}
+              <div className="h-[15%] bg-white border-b border-gray-200 flex items-center px-3 sm:px-4">
+                <div className="w-20 sm:w-24 h-5 sm:h-6 bg-primary rounded"></div>
+                <div className="ml-auto flex space-x-2 sm:space-x-4">
+                  <div className="w-12 sm:w-16 h-4 sm:h-5 bg-gray-100 rounded"></div>
+                  <div className="w-12 sm:w-16 h-4 sm:h-5 bg-gray-100 rounded"></div>
+                  <div className="w-16 sm:w-20 h-4 sm:h-5 bg-gray-100 rounded"></div>
+                  <div className="w-20 sm:w-24 h-6 sm:h-8 bg-primary rounded-full"></div>
+                </div>
+              </div>
+              {/* Hero Banner */}
+              <div className="h-[30%] bg-gradient-to-r from-blue-600 to-blue-400 flex items-center px-4 sm:px-6">
+                <div className="w-full">
+                  <div className="w-3/4 h-5 sm:h-6 bg-white rounded mb-2"></div>
+                  <div className="w-1/2 h-3 sm:h-4 bg-white/80 rounded mb-3"></div>
+                  <div className="w-28 sm:w-32 h-6 sm:h-8 bg-white rounded-full"></div>
+                </div>
+              </div>
+              {/* Property Listings */}
+              <div className="p-3 sm:p-4">
+                <div className="w-40 sm:w-48 h-5 sm:h-6 bg-gray-800 rounded mb-3 sm:mb-4"></div>
+                <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                      <div className="h-20 sm:h-24 bg-blue-100"></div>
+                      <div className="p-2">
+                        <div className="w-full h-4 sm:h-5 bg-blue-50 rounded mb-1 sm:mb-2"></div>
+                        <div className="w-2/3 h-3 sm:h-4 bg-gray-100 rounded"></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content: Headline, Text, Buttons */}
+      <div className="container relative z-20 pb-16 md:pb-24 px-4 sm:px-6 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-2xl mx-auto"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+            Marketing Tools. <span className="text-primary">Done Properly.</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-600 mb-3 sm:mb-4 max-w-lg mx-auto">
+            Websites. Tours. Staging. Smart Cards. All in one place.
+          </p>
+          <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-lg mx-auto">
+            We don't hide our pricing or require demos. What you see is what you get — and what you get is everything you need.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <Button onClick={() => scrollToSection('pricing')} size="lg" className="w-full sm:w-auto">
+              Pick Your Plan
+            </Button>
+            <Button onClick={() => scrollToSection('services')} variant="outline" size="lg" className="w-full sm:w-auto">
+              Explore Services
+            </Button>
+          </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}
