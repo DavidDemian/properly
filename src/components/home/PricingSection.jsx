@@ -153,7 +153,7 @@ const PricingSection = () => {
               
               <div className="mt-auto pt-4">
                 <Button 
-                  to="/contact" 
+                  to="/get-started" 
                   className="w-full" 
                   variant={pkg.popular ? 'primary' : 'outline'}
                 >

@@ -1,8 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ProperlyLogo from '../assets/images/ProperlyLogo.jsx';
+import ProperlyLogo from '../assets/images/ProperlyLogo';
 
 const Footer = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Add a highlight effect
+      section.classList.add('ring-4', 'ring-primary', 'ring-offset-2');
+      setTimeout(() => section.classList.remove('ring-4', 'ring-primary', 'ring-offset-2'), 1200);
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container">
@@ -23,23 +33,23 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-white transition-colors">
-                  Home
-                </Link>
+                <button onClick={() => scrollToSection('what-we-do')} className="text-gray-400 hover:text-white transition-colors bg-transparent border-none outline-none cursor-pointer">
+                  About
+                </button>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors bg-transparent border-none outline-none cursor-pointer">
                   Services
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('pricing')} className="text-gray-400 hover:text-white transition-colors bg-transparent border-none outline-none cursor-pointer">
                   Pricing
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
+                <Link to="/get-started" className="text-gray-400 hover:text-white transition-colors">
+                  Get Started
                 </Link>
               </li>
             </ul>
@@ -50,24 +60,24 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/idx-websites" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors bg-transparent border-none outline-none cursor-pointer">
                   IDX Websites
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/services/nfc-cards" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors bg-transparent border-none outline-none cursor-pointer">
                   NFC Business Cards
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/services/virtual-tours" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors bg-transparent border-none outline-none cursor-pointer">
                   360° Virtual Tours
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/services/virtual-staging" className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors bg-transparent border-none outline-none cursor-pointer">
                   Virtual Staging
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -80,7 +90,7 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                info@properly.com
+                <a href="mailto:info@properly.cc" className="hover:text-white transition-colors">info@properly.cc</a>
               </li>
               <li className="flex items-center text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

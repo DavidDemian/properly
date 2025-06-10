@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import Button from '../Button';
 
 const HeroSection = () => {
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -37,10 +37,10 @@ const HeroSection = () => {
               We don't hide our pricing or require demos. What you see is what you get — and what you get is everything you need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button to="/pricing" size="lg">
+              <Button onClick={() => scrollToSection('pricing')} size="lg">
                 Pick Your Plan
               </Button>
-              <Button onClick={scrollToServices} variant="outline" size="lg">
+              <Button onClick={() => scrollToSection('services')} variant="outline" size="lg">
                 Explore Services
               </Button>
             </div>

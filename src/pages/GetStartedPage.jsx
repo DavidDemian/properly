@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ProperlyLogo from '../assets/images/ProperlyLogo.jsx';
 
 const steps = [
@@ -577,6 +577,7 @@ const OnboardingWizardModal = ({ open, onClose }) => {
 };
 
 const GetStartedPage = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -620,6 +621,12 @@ const GetStartedPage = () => {
                     I Need Guidance
                   </button>
                 </div>
+                <button
+                  onClick={() => navigate('/')}
+                  className="px-6 py-2 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-primary/10 transition-all duration-200"
+                >
+                  ← Go Back
+                </button>
               </motion.section>
             )}
           </div>

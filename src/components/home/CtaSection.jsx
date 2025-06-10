@@ -4,6 +4,13 @@ import Section from '../Section';
 import Button from '../Button';
 
 const CtaSection = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Section 
       id="cta" 
@@ -46,7 +53,7 @@ const CtaSection = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button 
-            to="/pricing" 
+            onClick={() => scrollToSection('pricing')}
             variant="secondary" 
             size="lg"
             className="font-semibold"
@@ -55,7 +62,7 @@ const CtaSection = () => {
           </Button>
           
           <Button 
-            to="/contact" 
+            href="mailto:info@properly.cc"
             variant="outline" 
             size="lg"
             className="text-white border-white hover:bg-white/20 font-semibold"
