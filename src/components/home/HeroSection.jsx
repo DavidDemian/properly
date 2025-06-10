@@ -18,29 +18,29 @@ const HeroSection = () => {
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="container relative z-10 pb-16 md:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container relative z-10 pb-16 md:pb-24 px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left order-2 lg:order-1"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
               Marketing Tools. 
               <span className="text-primary"> Done Properly.</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-4 max-w-lg mx-auto lg:mx-0">
+            <p className="text-lg sm:text-xl text-gray-600 mb-3 sm:mb-4 max-w-lg mx-auto lg:mx-0">
               Websites. Tours. Staging. Smart Cards. All in one place.
             </p>
-            <p className="text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0">
               We don't hide our pricing or require demos. What you see is what you get — and what you get is everything you need.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button onClick={() => scrollToSection('pricing')} size="lg">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+              <Button onClick={() => scrollToSection('pricing')} size="lg" className="w-full sm:w-auto">
                 Pick Your Plan
               </Button>
-              <Button onClick={() => scrollToSection('services')} variant="outline" size="lg">
+              <Button onClick={() => scrollToSection('services')} variant="outline" size="lg" className="w-full sm:w-auto">
                 Explore Services
               </Button>
             </div>
@@ -50,69 +50,53 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="relative order-1 lg:order-2 mb-8 lg:mb-0"
           >
-            <div className="relative z-10 bg-white p-4 rounded-lg shadow-xl">
+            <div className="relative z-10 bg-white p-3 sm:p-4 rounded-lg shadow-xl">
               <div className="aspect-[4/3] rounded-lg overflow-hidden bg-white">
                 {/* Real Estate Website Mockup */}
                 <div className="w-full h-full relative">
                   {/* Website Header */}
-                  <div className="h-[15%] bg-white border-b border-gray-200 flex items-center px-4">
-                    <div className="w-24 h-6 bg-primary rounded"></div>
-                    <div className="ml-auto flex space-x-4">
-                      <div className="w-16 h-5 bg-gray-100 rounded"></div>
-                      <div className="w-16 h-5 bg-gray-100 rounded"></div>
-                      <div className="w-20 h-5 bg-gray-100 rounded"></div>
-                      <div className="w-24 h-8 bg-primary rounded-full"></div>
+                  <div className="h-[15%] bg-white border-b border-gray-200 flex items-center px-3 sm:px-4">
+                    <div className="w-20 sm:w-24 h-5 sm:h-6 bg-primary rounded"></div>
+                    <div className="ml-auto flex space-x-2 sm:space-x-4">
+                      <div className="w-12 sm:w-16 h-4 sm:h-5 bg-gray-100 rounded"></div>
+                      <div className="w-12 sm:w-16 h-4 sm:h-5 bg-gray-100 rounded"></div>
+                      <div className="w-16 sm:w-20 h-4 sm:h-5 bg-gray-100 rounded"></div>
+                      <div className="w-20 sm:w-24 h-6 sm:h-8 bg-primary rounded-full"></div>
                     </div>
                   </div>
                   
                   {/* Hero Banner */}
-                  <div className="h-[30%] bg-gradient-to-r from-blue-600 to-blue-400 flex items-center px-6">
+                  <div className="h-[30%] bg-gradient-to-r from-blue-600 to-blue-400 flex items-center px-4 sm:px-6">
                     <div className="w-full">
-                      <div className="w-3/4 h-6 bg-white rounded mb-2"></div>
-                      <div className="w-1/2 h-4 bg-white/80 rounded mb-3"></div>
-                      <div className="w-32 h-8 bg-white rounded-full"></div>
+                      <div className="w-3/4 h-5 sm:h-6 bg-white rounded mb-2"></div>
+                      <div className="w-1/2 h-3 sm:h-4 bg-white/80 rounded mb-3"></div>
+                      <div className="w-28 sm:w-32 h-6 sm:h-8 bg-white rounded-full"></div>
                     </div>
                   </div>
                   
                   {/* Property Listings */}
-                  <div className="p-4">
-                    <div className="w-48 h-6 bg-gray-800 rounded mb-4"></div>
-                    <div className="grid grid-cols-3 gap-4">
-                      {/* Property Card 1 */}
-                      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                        <div className="h-24 bg-blue-100"></div>
-                        <div className="p-2">
-                          <div className="w-full h-5 bg-blue-50 rounded mb-2"></div>
-                          <div className="w-2/3 h-4 bg-gray-100 rounded"></div>
+                  <div className="p-3 sm:p-4">
+                    <div className="w-40 sm:w-48 h-5 sm:h-6 bg-gray-800 rounded mb-3 sm:mb-4"></div>
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                      {/* Property Cards */}
+                      {[1, 2, 3].map((i) => (
+                        <div key={i} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                          <div className="h-20 sm:h-24 bg-blue-100"></div>
+                          <div className="p-2">
+                            <div className="w-full h-4 sm:h-5 bg-blue-50 rounded mb-1 sm:mb-2"></div>
+                            <div className="w-2/3 h-3 sm:h-4 bg-gray-100 rounded"></div>
+                          </div>
                         </div>
-                      </div>
-                      
-                      {/* Property Card 2 */}
-                      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                        <div className="h-24 bg-blue-100"></div>
-                        <div className="p-2">
-                          <div className="w-full h-5 bg-blue-50 rounded mb-2"></div>
-                          <div className="w-2/3 h-4 bg-gray-100 rounded"></div>
-                        </div>
-                      </div>
-                      
-                      {/* Property Card 3 */}
-                      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
-                        <div className="h-24 bg-blue-100"></div>
-                        <div className="p-2">
-                          <div className="w-full h-5 bg-blue-50 rounded mb-2"></div>
-                          <div className="w-2/3 h-4 bg-gray-100 rounded"></div>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
               </div>
               
-              {/* Floating elements */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-3 rounded-lg shadow-lg">
+              {/* Floating elements - hidden on mobile */}
+              <div className="hidden md:block absolute -bottom-6 -left-6 bg-white p-3 rounded-lg shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -126,7 +110,7 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              <div className="absolute -top-6 -right-6 bg-white p-3 rounded-lg shadow-lg">
+              <div className="hidden md:block absolute -top-6 -right-6 bg-white p-3 rounded-lg shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center text-gray-800">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -147,7 +131,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll indicator - moved outside container */}
+      {/* Scroll indicator */}
       <div className="absolute bottom-2 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-30 w-full pointer-events-none">
         <p className="text-sm text-gray-500 mb-2">Scroll to explore</p>
         <motion.div

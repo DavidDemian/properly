@@ -2,14 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
-// import ComingSoon from './pages/ComingSoon';
+import ComingSoon from './pages/ComingSoon';
 import GetStartedPage from './pages/GetStartedPage';
 import OnboardingForm from './pages/OnboardingForm';
 import { AnimatePresence, motion } from 'framer-motion';
 
+// Temporarily disabled for sharing
 // const isProduction = process.env.NODE_ENV === 'production';
 
 function App() {
+  // Temporarily disabled for sharing
   // if (isProduction) {
   //   return <ComingSoon />;
   // }
